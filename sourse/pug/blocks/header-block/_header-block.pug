@@ -1,0 +1,24 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			+e.row.row
+				.col.d-none.d-md-block
+					+e.img-wrap
+						img(src="img/head-img.jpg", alt="")
+						+e.title
+							span Не пропусти встречу
+							span молодых профессионалов
+				+e.right-col.col-md-auto
+					+e.calendar
+						+e.date 7-10
+						+e.month июля
+						+e.year 2019
+					.row.align-items-center.align-items-md-end.justify-content-md-center.flex-md-row-reverse
+						.col-auto
+							+e.count-img(src="img/people-icon.svg", alt="")
+						.col-auto
+							+e.count 1500
+							+e.small участников со всей России
+
+	// end header-block

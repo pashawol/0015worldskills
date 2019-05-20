@@ -1,0 +1,70 @@
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="img/svg/sprite.svg#" + name)
+
+
+mixin breadcrumb(act, ...items)
+	nav.breadcrumb
+		each item in items
+			a.breadcrumb-item(href='#')= item 
+		span.breadcrumb-item.active= act
+		
+mixin pugin()
+	nav(aria-label='...')
+		ul.pagination.justify-content-center
+			li.page-item.disabled
+				a.page-link(href='#', tabindex='-1') 
+					i(class="fas fa-chevron-left")
+			li.page-item.disabled
+				a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
+
+			li.page-item
+				a.page-link(href='#') 1
+			li.page-item.active
+				a.page-link(href='#')
+					| 2 
+					span.sr-only (current)
+			li.page-item
+				a.page-link.page-link-more(href='#') ...
+			li.page-item
+				a.page-link(href='#') 3
+
+			li.page-item
+				a.page-link.d-none.d-md-block(href='#') Дальше
+			li.page-item
+				a.page-link(href='#') 
+					i(class="fas fa-chevron-right")
+//- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
+mixin arrow()
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+		+icon('chevron-right')
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+		+icon('chevron-left')
+		
+ 
+mixin soc()
+	+b.soc
+		.row.align-items-center.row--sm
+			.col-sm-auto.col.strong Поделиться в соцсетях:
+			.col-auto
+				+e.A.item--fb(href="#" target="_blank")
+					+icon('fb')
+			.col-auto 
+				+e.A.item--instagram(href="#" target="_blank")
+					+icon('instagram')
+			.col-auto 
+				+e.A.item--vk(href="#" target="_blank")
+					+icon('vk')
+		
+		
+//- WP menu
+mixin mnu()
+	- var nav= {"Участникам":"#","Как стать участником":"#","Как добраться":"#","Задать вопрос":"#"} 
+	ul.menu
+		each linkPatch, linkName in nav
+			li.menu-item: a(href="#")= linkName
+//- mixin mnu()
+//- 	+e.UL.nav
+//- 		each linkPatch, linkName in nav
+//- 			+e.LI.item: +e.A.link(href= linkPatch)= linkName

@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+
+include ../blocks/s-participant/_s-participant.pug
+include ../blocks/s-school/_s-school.pug
+include ../blocks/s-forum/_s-forum.pug
+include ../blocks/s-how/_s-how.pug
+include ../blocks/s-get-to/_s-get-to.pug
+include ../blocks/s-gal/_s-gal.pug
+include ../blocks/s-logo/_s-logo.pug
+
+block title
+	title title
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-line() 
+		+header-block()
+		+s-participant
+	+s-school
+	+s-forum
+	+s-how
+	+s-get-to
+	+s-gal
+	+s-logo
+	+s-form() 
+	+footer()
+

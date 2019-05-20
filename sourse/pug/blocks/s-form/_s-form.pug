@@ -1,0 +1,12 @@
+mixin s-form()
+	// start s-form
+	+b.s-form.section#s-form&attributes(attributes)
+		.container
+			.row
+				.col
+					+b.section-title
+						h2 Есть вопросы?
+						+e.text Задайте их нашим специалистам
+				.col-sm-auto
+					+e.btn(href="#") Задать вопрос
+	// end s-form

@@ -1,0 +1,65 @@
+ 
+	  
+.soc{
+	// margin: 0 -3px;
+	&__item{
+		// display: inline-block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none !important;
+		// margin: 0 3px;
+		vertical-align: middle;
+		@include mt;
+		border: 1px solid ;
+		width: rem(30);
+		height: rem(30);
+		border-radius: 50%;
+		text-align: center;
+		.icon{
+			font-size: 1rem;
+		}
+		&--fb{
+				border-color: #789dff;
+				&:hover{
+					background-color: #789dff;
+				}
+			}
+			
+			&--instagram{
+				border-color: #d4445a;
+				&:hover{
+					background-color: #d4445a;
+				}
+				
+			}
+			&--vk{
+				border-color: #ffd200;
+				&:hover{
+					background-color: #ffd200;
+				}
+				.icon{
+					font-size: rem(9);
+				}
+
+		}
+
+	}
+
+ 
+	 
+
+}
+ 
+
+.counter{
+	counter-reset: num;
+	&__item {
+		position: relative; 
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+}
+

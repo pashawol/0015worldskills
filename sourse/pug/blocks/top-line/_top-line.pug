@@ -1,0 +1,52 @@
+mixin mob-mnu()
+	
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+		
+			+mnu()
+			.text-right
+	//  мобильное меню
+mixin top-line()
+	// start .top-line
+	+b.top-line
+		.container
+			.row
+				+e.col.col-lg-auto.col
+					+e.logo
+						img(src="img/logo.svg", alt="")
+				.col-auto.d-lg-none
+					+e.mob-block
+						+b.toggle-menu-mobile--js.d-xl-none
+							span
+						.row
+							.col-auto
+								a(href="#")
+									img(src="img/whatsapp.svg", alt="")
+							.col-auto
+								a(href="#")
+									img(src="img/telegram.svg", alt="")
+				.col-lg
+					.d-none.d-lg-block
+						+mnu()
+					+e.block
+						+e.H1.title II-ой Молодежный Форум для участников движения  «Молодые профессионалы (Ворлдскиллс Россия)» 
+						+e.addr 
+							span.h5 Новгородская область, г. Великий Новгород
+							| 
+							+e.btn(href="#") Как добраться
+						.d-none.d-lg-block
+							.row
+								.col
+									.row.align-items-center
+										.col-auto.strong  	Наши каналы:
+										.col-auto
+											a(href="#")
+												img(src="img/whatsapp.svg", alt="")
+										.col-auto
+											a(href="#")
+												img(src="img/telegram.svg", alt="")
+								.col-auto.d-none.d-lg-block
+									+soc
+	// end .top-line

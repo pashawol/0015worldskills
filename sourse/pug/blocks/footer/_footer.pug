@@ -1,0 +1,23 @@
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			.row
+				+e.col.col.text-secondary © 2014-2018 II-ой Молодежный Форум для участников движения «Молодые профессионалы (Ворлдскиллс Россия)» 
+				+e.col.col-sm-auto.text-secondary 7-10 июля 2019 года г. Великий Новгород
+
+				+e.col.col-12
+					a(href="#") #МолодыеПрофессионалы 
+					| 
+					a(href="#") #WorldSkillsRussia
+				+e.col.col
+					.row.align-items-center.row--sm
+						.col-sm-auto.col.strong  	Наши каналы:
+						.col-auto
+							a(href="#")
+								img(src="img/whatsapp.svg", alt="")
+						.col-auto
+							a(href="#")
+								img(src="img/telegram.svg", alt="")
+				+e.col.col-sm-auto.order-sm-last.order-first
+					+soc()
+			

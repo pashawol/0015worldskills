@@ -1,0 +1,22 @@
+mixin s-gal()
+	// start s-gal
+	+b.SECTION.s-gal#s-gal&attributes(attributes)
+		.container.section
+			+e.title.d-lg-none КАК это было  в&nbsp;2018
+			+e.slider.swiper-container.slider--js.gal
+				.swiper-wrapper.row--sm
+					+e.slide--title.swiper-slide.d-none.d-lg-flex
+						+e.H2.title КАК это было  в&nbsp;2018
+					- for (var x = 1; x < 9; x++)
+						+e.slide.swiper-slide
+							+e.img-wrap(href=`img/gal-${x}.jpg`)
+								img.lazy(src="#" data-src=`img/gal-${x}.jpg`, alt="")
+						// +e.slide.swiper-slide
+					+e.slide--title.swiper-slide.d-none.d-lg-flex
+						+e.title 	КАК это будет  
+							br
+							| в&nbsp;2019   решать тебе!
+						
+
+			+e.title.d-lg-none 	КАК это будет    в&nbsp;2019   решать тебе! 
+	// end s-gal
