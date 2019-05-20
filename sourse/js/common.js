@@ -119,7 +119,12 @@ JSCCommon = {
 			mainClass: 'my-mfp-zoom-in',
 			tClose: 'Закрыть (Esc)',
 		});
-
+		$(".s-school__btn").click(function(){
+			var modal = $($(this).attr('href')) 
+			console.log(modal.find('.modal-text__title'))
+			modal.find('.modal-text__title').text(   $(this).parent().find('.s-school__title').text())
+			modal.find('img').attr( 'src',  $(this).parent().find('img').attr('src'))
+		})
 		// / modal window
 
 		// modal галерея
