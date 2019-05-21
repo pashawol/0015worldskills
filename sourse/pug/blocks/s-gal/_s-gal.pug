@@ -2,17 +2,17 @@ mixin s-gal()
 	// start s-gal
 	+b.SECTION.s-gal#s-gal&attributes(attributes)
 		.container.section
-			+e.title.d-lg-none КАК это было  в&nbsp;2018
+			+e.title.d-lg-none(class="wow fadeInUp" data-wow-duration="0.8s") КАК это было  в&nbsp;2018
 			+e.slider.swiper-container.slider--js.gal
 				.swiper-wrapper.row--sm
-					+e.slide--title.swiper-slide.d-none.d-lg-flex
+					+e.slide--title.swiper-slide.d-none.d-lg-flex(class="wow fadeInUp" data-wow-duration="0.8s")
 						+e.H2.title КАК это было  в&nbsp;2018
 					- for (var x = 1; x < 9; x++)
-						+e.slide.swiper-slide
+						+e.slide.swiper-slide(class="wow fadeInUp" data-wow-duration="0.8s")
 							+e.img-wrap(href=`img/gal-${x}.jpg`)
 								img.lazy(src="#" data-src=`img/gal-${x}.jpg`, alt="")
 						// +e.slide.swiper-slide
-					+e.slide--title.swiper-slide.d-none.d-lg-flex
+					+e.slide--title.swiper-slide.d-none.d-lg-flex(class="wow fadeInUp" data-wow-duration="0.8s")
 						+e.title 	КАК это будет  
 							br
 							| в&nbsp;2019   решать тебе!

@@ -3,11 +3,11 @@ mixin s-participant()
 	+b.SECTION.s-participant.section#s-participant&attributes(attributes)
 		.container
 			.row
-				.col.order-lg-first
+				.col.order-lg-first(class="wow fadeInUp" data-wow-duration="0.8s")
 					+b.section-title
 						h2 Участникам
 				
-				.col-12
+				.col-12(class="wow fadeInUp" data-wow-duration="0.8s")
 					+e.row.row
 						mixin item(i)
 							+e.col.col-lg.col-md-4.col-6
@@ -26,7 +26,7 @@ mixin s-participant()
 							+e.title Спорт и здоровый образ жизни
 						+item('6')
 							+e.title Вечерние активности
-				.col-lg-auto.order-lg-first
+				.col-lg-auto.order-lg-first(class="wow fadeInUp" data-wow-duration="0.8s")
 					.row.text-center.justify-content-center
 						.col-md-auto
 							+e.link(href="#") #молодыепрофессионалы     

@@ -2,7 +2,7 @@ mixin s-logo()
 	// start s-logo
 	+b.s-logo.section#s-logo&attributes(attributes)
 		.container 
-			.row
+			.row(class="wow fadeInUp" data-wow-duration="0.8s")
 				- for (var x = 1; x < 5; x++)
 					+e.logo.col-lg-3.col-6
 						img.lazy.res-i(src="#" data-src=`img/logo-${x}.png`, alt="")

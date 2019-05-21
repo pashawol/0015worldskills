@@ -14,9 +14,9 @@
 		// min-width: 270px;
 		@include media-breakpoint-up(md) {
 
-			min-height: 268px;
+			min-height: rem(268px);
 		}
-		min-height: 320px;
+		min-height: rem(320px);
 		margin-bottom: 0;
 		img{
 			position: absolute;
@@ -29,9 +29,9 @@
 		&:not(.s-school__item--horizontal){
 			@include media-breakpoint-up(lg) {
 
-				min-height: 370px;
+				min-height: rem(370px);
 			}
-			min-height: 350px;
+			min-height: rem(350px);
 			height: 100%;
 			margin-bottom: 0;
 		}

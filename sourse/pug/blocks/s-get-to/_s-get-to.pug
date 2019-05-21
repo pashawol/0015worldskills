@@ -2,7 +2,7 @@ mixin s-get-to()
 	// start s-get-to
 	+b.SECTION.s-get-to.section#s-get-to&attributes(attributes)
 		.container
-			.row.align-items-center
+			.row.align-items-center(class="wow fadeInUp" data-wow-duration="0.8s")
 			
 				.col
 					+b.section-title
@@ -18,7 +18,7 @@ mixin s-get-to()
 			+e.title  Варианты проезда до Великого Новгорода
 
 			mixin item(i,t,p)
-					+e.item.row
+					+e.item.row(class="wow fadeInUp" data-wow-duration="0.8s")
 						+e.icon-wrap.col-auto
 							+icon(i)
 						+e.text.col
@@ -26,16 +26,16 @@ mixin s-get-to()
 							+e.item-text= p
 			.row
 				+e.col.col-lg-6
-					+e.col-title Санкт-Петербург - Великий новгород
+					+e.col-title(class="wow fadeInUp" data-wow-duration="0.8s") Санкт-Петербург - Великий новгород
 					+item('car','На автомобиле','196 километров протяженность маршрута по трасее ~ 2.5-3 часа')
 					+item('bus','На автобусе','С петербургского автовокзала (ст. метро Обводный канал) ~ 3 часа')
 					+item('taxi','Маршрутное такси','“НовгородАвто”, “Фабус” ~ 3 часа')
 					+item('train','Поезд-экспресс “Ласточка”','Станция Новгород на Волхове (отправление с Московского вокзала) ~ 3 часа')
 					+item('train','Пассажирский поезд','с Московского вокзала (ст. метро Площадь Восстания) ~ 4 часа')
 				+e.col.col
-					+e.col-title Москва - Великий новгород
+					+e.col-title(class="wow fadeInUp" data-wow-duration="0.8s") Москва - Великий новгород
 					+item('car','На автомобиле','560 километров протяженность маршрута по трасее ~ 6 часов')
 					+item('train','Пассажирский поезд','поезд № 042Г отходит в 21:55 с Курского вокзала. Отправление ежедневно, прибытие на ж/д станцию в Новгороде Новгород на Волхове в 06:24')
 					+item('train','Сапсан','До станции Чудово-московское ~ 3,5 часа')
-					+e.foot-text.text-secondary * от мест прибытия до мест проживания будет организован трансфер, в соответствии с заявками от участников
+					+e.foot-text.text-secondary(class="wow fadeInUp" data-wow-duration="0.8s") * от мест прибытия до мест проживания будет организован трансфер, в соответствии с заявками от участников
 	// end s-get-to

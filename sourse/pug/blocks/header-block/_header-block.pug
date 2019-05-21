@@ -4,17 +4,18 @@ mixin header-block()
 		.container
 			+e.row.row
 				.col.d-none.d-md-block
-					+e.img-wrap
+					+e.img-wrap(class="wow fadeInUp" data-wow-duration="0.8s")
 						img(src="img/head-img.jpg", alt="")
-						+e.title
+						+e.title(class="wow fadeInUp" data-wow-duration="0.8s")
 							span Не пропусти встречу
+							br
 							span молодых профессионалов
 				+e.right-col.col-md-auto
-					+e.calendar
+					+e.calendar(class="wow fadeInUp" data-wow-duration="0.8s")
 						+e.date 7-10
 						+e.month июля
 						+e.year 2019
-					.row.align-items-center.align-items-md-end.justify-content-md-center.flex-md-row-reverse
+					.row.align-items-center.align-items-md-end.justify-content-md-center.flex-md-row-reverse(class="wow fadeInUp" data-wow-duration="0.8s")
 						.col-auto
 							+e.count-img(src="img/people-icon.svg", alt="")
 						.col-auto

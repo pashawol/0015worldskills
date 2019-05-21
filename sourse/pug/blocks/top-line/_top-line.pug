@@ -10,7 +10,7 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-line()
 	// start .top-line
-	+b.top-line
+	+b.top-line(class="wow fadeInDown" data-wow-duration="0.8s")
 		.container
 			.row
 				+e.col.col-lg-auto.col
@@ -31,7 +31,7 @@ mixin top-line()
 					.d-none.d-lg-block
 						+mnu()
 					+e.block
-						+e.H1.title II-ой Молодежный Форум для участников движения  «Молодые профессионалы (Ворлдскиллс Россия)» 
+						+e.H1.title II Молодежный Форум для участников движения  «Молодые профессионалы (Ворлдскиллс Россия)» 
 						+e.addr 
 							span.h5 Новгородская область, г. Великий Новгород
 							| 

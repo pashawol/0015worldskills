@@ -301,6 +301,7 @@ jQuery(document).ready(function ($) {
  
 	// modal window
 
- 
+	var wow = new WOW({ mobile: false });
+	wow.init();
 
 });
