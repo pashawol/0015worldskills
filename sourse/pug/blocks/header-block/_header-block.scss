@@ -35,13 +35,14 @@
 		font-weight: 900;
 		max-width: 100%;
 		width: 100%;
+		line-height: 1;
 		span{
 			background-color: #36ac46;
 			color: #ffffff;
 			line-height: 1;
 			display: inline-block;
-			padding: em(3) em(8);
-			margin-bottom: em(3);
+			padding: em(1) em(3) em(2);
+			margin-bottom: em(2);
 		}
 	}
 	&__calendar{

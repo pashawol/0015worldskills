@@ -2,14 +2,15 @@
 	border-bottom: 2px solid #f2f2f2;
 		&__img-wrap{
 			position: absolute;
+			height: 100%;
 			@include media-breakpoint-up(xl) {
 
 				right: rem(110);
 			}
 			right: 0;
 			top: rem(-40);
-			height: 100%;
 			img{
+				width: auto;
 				max-height: 100%;
 			}
 		} 

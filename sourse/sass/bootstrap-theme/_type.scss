@@ -14,37 +14,37 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     font-size: $h1-font-size;
   }
   @include font-size($h1-font-size *.9);
  }
 h2, .h2 {
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     font-size: $h2-font-size;
   }
   @include font-size($h2-font-size *.9);
  }
 h3, .h3 {
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     font-size: $h3-font-size;
   }
   @include font-size($h3-font-size *.9);
  }
 h4, .h4 {
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     font-size: $h4-font-size;
   }
   @include font-size($h4-font-size *.9);
  }
 h5, .h5 {
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     font-size: $h5-font-size;
   }
   @include font-size($h5-font-size *.9);
  }
 h6, .h6 {
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     font-size: $h6-font-size;
   }
   @include font-size($h6-font-size *.9);
@@ -72,7 +72,7 @@ h6, .h6 {
   line-height: $display-line-height;
 }
 .display-4 {
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     font-size: $display4-size;
   }
   @include font-size($display4-size *.8); 
