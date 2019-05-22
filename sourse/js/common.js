@@ -10,6 +10,20 @@ var btnToggle = $(".toggle-menu-mobile--js")
 			slideToClickedSlide: true, 
 			freeMode: true,
 		});
+		
+		var swiper5 = new Swiper('.header-block__slider--js', {
+			// slidesPerView: 5, 
+			slidesPerView: 1, 
+			watchOverflow: true,
+			spaceBetween: 0,   
+			fadeEffect: {
+				crossFade: true
+			},
+			// autoplay: {
+			// 	delay: 5000,
+			// },
+		});
+
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJX
 	LazyFunction: function () {
@@ -218,25 +232,6 @@ jQuery(document).ready(function ($) {
 	JSCCommon.mobileMenu();
  
 
-
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
-
-
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
@@ -250,16 +245,7 @@ jQuery(document).ready(function ($) {
  
 
 		// скрывает моб меню
-
-		var topH = $("header ").innerHeight();
-
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > topH) {
-				$('.top-nav  ').addClass('fixed');
-			} else {
-				$('.top-nav  ').removeClass('fixed');
-			}
-		});
+ 
 		// конец добавил
 		if (window.matchMedia("(min-width: 992px)").matches) {
 
@@ -283,23 +269,7 @@ jQuery(document).ready(function ($) {
 
 	heightses();
 
-
-
-	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
-
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
-
-	//        return false;
-	//    });
-
  
-	// slider
-
- 
-	// modal window
 
 	var wow = new WOW({ mobile: false });
 	wow.init();
