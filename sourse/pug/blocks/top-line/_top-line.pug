@@ -39,14 +39,16 @@ mixin top-line()
 						.d-none.d-lg-block
 							.row
 								.col
-									.row.align-items-center
-										.col-auto.strong  	Наши каналы:
-										.col-auto
-											a(href="#")
-												img(src="img/whatsapp.svg", alt="")
-										.col-auto
-											a(href="#")
-												img(src="img/telegram.svg", alt="")
+									.row.text-center 
+										.col-md-auto
+											+e.link(href="#") #молодыепрофессионалы       
+
+										.col-md-auto 
+											+e.link(href="#")  #worldskillsRussia
+										
+										.col-md-auto 
+											+e.link(href="#")   #YOUTHFORUM
+										
 								.col-auto.d-none.d-lg-block
 									+soc
 	// end .top-line

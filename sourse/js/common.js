@@ -70,48 +70,7 @@ JSCCommon = {
 			window.addEventListener("DOMContentLoaded", lazyLoad);
 		});
 
-
-		// лэзи 
-		document.addEventListener("DOMContentLoaded", function () {
-			let lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
-			let active = false;
-
-			const lazyLoad = function () {
-				if (active === false) {
-					active = true;
-
-					setTimeout(function () {
-						lazyImages.forEach(function (lazyImage) {
-							if (((lazyImage.getBoundingClientRect().top - lazyImage.parentElement.clientHeight) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.parentElement.clientHeight) >= 0) && getComputedStyle(lazyImage).display !== "none") {
-								lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
-								lazyImage.src = lazyImage.dataset.src;
-								// lazyImage.srcset = lazyImage.dataset.srcset;
-								lazyImage.classList.remove("lazy");
-
-								lazyImages = lazyImages.filter(function (image) {
-									return image !== lazyImage;
-								});
-
-								if (lazyImages.length === 0) {
-									document.removeEventListener("scroll", lazyLoad);
-									window.removeEventListener("resize", lazyLoad);
-									window.removeEventListener("orientationchange", lazyLoad);
-									window.addEventListener("DOMContentLoaded", lazyLoad);
-								}
-							}
-						});
-
-						active = false;
-					}, 200);
-				}
-			};
-
-			document.addEventListener("scroll", lazyLoad);
-			window.addEventListener("resize", lazyLoad);
-			window.addEventListener("orientationchange", lazyLoad);
-			window.addEventListener("DOMContentLoaded", lazyLoad);
-		});
-
+ 
 	},
 
 	// /LazyFunction
@@ -138,6 +97,7 @@ JSCCommon = {
 			console.log(modal.find('.modal-text__title'))
 			modal.find('.modal-text__title').text(   $(this).parent().find('.s-school__title').text())
 			modal.find('img').attr( 'src',  $(this).parent().find('img').attr('src'))
+			modal.find('.modal-text__text').xtml(   $(this).parent().find('.hidden-text--js').html())
 		})
 		// / modal window
 
@@ -226,7 +186,7 @@ jQuery(document).ready(function ($) {
 	// Custom JS
 
 	// вызов magnificPopupCall
-	JSCCommon.accordion();
+	// JSCCommon.accordion();
 	JSCCommon.magnificPopupCall(); 
 
 	JSCCommon.mobileMenu();

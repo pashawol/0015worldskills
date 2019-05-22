@@ -82,12 +82,12 @@
 		background-color: $dark;
 	}
 	&::after{
-		width: rem(14px);
-		height: rem(14px);
+		width: rem(15px);
+		height: rem(15px);
 		border: 2px solid $primary;
 		background-color: #fff;
 		border-radius: 50%;
-		transform: translateX(-49%);
+		transform: translateX(-50%);
 		@include mt;
 
 
@@ -109,7 +109,7 @@
 		@include mt;
 		font-size: $h5-font-size; 
 		position: relative;
-		cursor: pointer;
+		// cursor: pointer;
 		@include media-breakpoint-up(lg) {
 
 			margin-right: rem(-20);

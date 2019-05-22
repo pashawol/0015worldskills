@@ -1,6 +1,13 @@
 .top-line {
   // padding: rem(9) 0;
   padding-top: rem(9);
+  &__link{
+		@extend .text-light;
+		@extend .h5;
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
   .row{
     @include roww(3.5);
   }
@@ -16,15 +23,21 @@
       width: 270px;
       padding-right: rem(35);
     }
+    @include media-breakpoint-up(xxl){
+      padding-bottom: rem(65);
+      
+    }
     @include media-breakpoint-up(md) {
-
+      
       max-width: rem(270px);
     }
+    
     max-width: rem(170px);
-
+    
     @include media-breakpoint-up(lg) {
-      padding-top: rem(45);
-      padding-bottom: rem(65);
+      padding-top: rem(25);
+      // padding-top: rem(45);
+      padding-bottom: rem(25);
       &::before{
         content: '';
         position: absolute;
@@ -126,11 +139,16 @@
 }
 
 .menu{
+  @include media-breakpoint-up(xxl){
+    
+    margin-bottom: rem(25);
+  }
   @include media-breakpoint-up(lg) {
 
     display: flex;
     list-style-type: none;
-    margin-bottom: rem(25);
+
+    margin-bottom: rem(15);
     @include roww(3);
   }
   position: relative;  
